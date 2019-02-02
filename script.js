@@ -77,7 +77,7 @@ function game(userChoice) {
 
           case "rp":
           case "ps":
-          case "rs": 
+          case "sr": 
                lose(userChoice, computerChoice);
                break;
 
