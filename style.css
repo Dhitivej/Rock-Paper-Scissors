@@ -11,10 +11,13 @@ body {
      background: #24272E;
 }
 header {
+     margin: 0;
+}
+header,footer {
      background: white;
      padding: 20px;
 }
-header h1 {
+header h1,footer h1 {
      color: #292c34;
      text-align: center;
      font-family: 'Asap', sans-serif;

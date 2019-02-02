@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-     <meta charset="utf-8" />
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>Rock Paper Scissors</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-          crossorigin="anonymous">
-     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
-     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-</head>
+     <head>
+          <meta charset="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <title>Rock Paper Scissors</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+               crossorigin="anonymous">
+          <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+          <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+     </head>
 
-<body>
-     <header>
-          <h1>Rock Paper Scissors</h1>
-     </header>
+     <body>
+          <header>
+               <h1>Rock Paper Scissors</h1>
+          </header>
 
-     <div class="score-board">
-          <div id="user-label" class="badge">
-               user
+          <div class="score-board">
+               <div id="user-label" class="badge">
+                    user
+               </div>
+               <div id="com-label" class="badge">
+                    comp
+               </div>
+               <span id="user-score">0</span>:<span id="com-score">0</span>
+
           </div>
-          <div id="com-label" class="badge">
-               comp
+          <div class="result">
+               <p>Press any button to start</p>
           </div>
-          <span id="user-score">0</span>:<span id="com-score">0</span>
-
-     </div>
-     <div class="result">
-          <p>Paper covers rock you win!!!</p>
-     </div>
-     <div class="choices">
-          <div class="choice" id="r">
-               <i class="far fa-hand-rock"></i>
+          <div class="choices">
+               <div class="choice" id="r">
+                    <i class="far fa-hand-rock"></i>
+               </div>
+               <div class="choice" id="p">
+                    <i class="far fa-hand-paper"></i>
+               </div>
+               <div class="choice" id="s">
+                    <i class="far fa-hand-scissors"></i>
+               </div>
           </div>
-          <div class="choice" id="p">
-               <i class="far fa-hand-paper"></i>
+
+          <p id="action-message">Make your move.</p>
+
+          <div class="container">
+               <button class="btn" id="reset-button" onclick="reset()">Reset</button>
           </div>
-          <div class="choice" id="s">
-               <i class="far fa-hand-scissors"></i>
-          </div>
-     </div>
 
-     <p id="action-message">Make your move.</p>
+          <script src="script.js"></script>
 
-     <div class="container">
-          <button class="btn" id="reset-button" onclick="reset()">Reset</button>
-     </div>
-
-     <script src="script.js"></script>
-</body>
+          <footer>
+               <h1>Made by Dhitivej Chuersuwan </h1>
+               <div class="container">
+                    <a title="Developers for Firefox" rel="nofollow" href="https://www.mozilla.org/firefox/this-browser-comes-highly-recommended/?utm_source=devs-for.firefox.com&utm_medium=referral&utm_campaign=devs-for-firefox&utm_content=Developers_For_Firefox_Dark" target="_blank">
+                         <img style="border:0 none;" alt="Developers for Firefox" srcset="//code.cdn.mozilla.net/for-firefox/badges/assets/Developers_For_Firefox_Dark.png,
+                    //code.cdn.mozilla.net/for-firefox/badges/assets/Developers_For_Firefox_Dark-2x.png 2x"
+                              src="//code.cdn.mozilla.net/for-firefox/badges/assets/Developers_For_Firefox_Dark.png">
+                    </a>
+               </div> 
+          </footer>
+     </body>
 
 </html>
