@@ -1,3 +1,4 @@
+window.onload = init;
 let userScore = 0;
 let comScore = 0;
 
@@ -9,6 +10,40 @@ const result = document.querySelector(".result p");
 const rock_div = document.getElementById('r');
 const paper_div = document.getElementById('p');
 const scissors_div = document.getElementById('s');
+
+function init () {
+     rock_div.addEventListener('click', () => game("r"));
+     
+     paper_div.addEventListener ('click', () => game("p"));
+     scissors_div.addEventListener('click', () => game("s"));
+
+}
+
+function game(userChoice) {
+     const computerChoice = getComputerChoice();
+     console.log(computerChoice);
+     console.log("user choice =  " + userChoice)
+
+     switch(userChoice + computerChoice) {
+          case "rs" : 
+          case "pr" :
+          case "sp" :
+               wins(userChoice, computerChoice);
+               break;
+
+          case "rp":
+          case "ps":
+          case "sr": 
+               lose(userChoice, computerChoice);
+               break;
+
+          case "rr" :
+          case "pp" :
+          case "ss" :
+               draw(userChoice, computerChoice);
+               break;
+     }
+}
 
 function getComputerChoice() {
 
@@ -61,39 +96,23 @@ function draw(userChoice , comChoice) {
      userChoice_div.classList.add('grey-glow');
      setTimeout(() => userChoice_div.classList.remove('grey-glow'), 300)
 }
+function reset() {
+     const resetButton = document.querySelector("#reset-button")
 
+     comScore = 0;
+     userScore = 0;
 
-function game(userChoice) {
-     const computerChoice = getComputerChoice();
-     console.log(computerChoice);
-     console.log("user choice =  " + userChoice)
+     comScore_span.innerHTML = 0;
+     userScore_span.innerHTML = 0;
 
-     switch(userChoice + computerChoice) {
-          case "rs" : 
-          case "pr" :
-          case "sp" :
-               wins(userChoice, computerChoice);
-               break;
+     resetButton.classList.add("green-glow");
+     setTimeout(() => resetButton.classList.remove("green-glow"), 300);
 
-          case "rp":
-          case "ps":
-          case "sr": 
-               lose(userChoice, computerChoice);
-               break;
-
-          case "rr" :
-          case "pp" :
-          case "ss" :
-               draw(userChoice, computerChoice);
-               break;
-     }
+     result.innerHTML = 'SCORE RESET 🔁'
 }
 
-function main () {
-     rock_div.addEventListener('click', () => game("r"));
-     
-     paper_div.addEventListener ('click', () => game("p"));
-     scissors_div.addEventListener('click', () => game("s"));
-}
 
-main();
+
+
+
+
